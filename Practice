@@ -1,0 +1,20 @@
+#Import numpy to work with numbers and lists of numbers easily
+import numpy as np
+
+#Import pylot from matplotlib to help us draw graphs and pictures
+import matplotlib.pyplot as plt
+
+#Import fits from astropy.io to open and use special space picture files called FITS.
+from astropy.io import fits
+
+#Import download_file from astropy.utils.data to grab data from the internet without leaving our code
+from astropy.utils.data import download_file
+
+#Import LogStretch and PowerStreych from astopy.visualization to make our space pictures look clearer
+from astropy.visualization import LogStretch, PowerStretch
+
+#Import ImageNormilize from astripy.visualization to help make sure our pictures show up nicely in our graphs
+from astropy.visualization.mpl_normalize import ImageNormalize
+
+#Use this function to download a space image stored in FITS file
+image_file = download_file('http://data.astropy.org/tutorials/FITS-image/HorseHead.fits', cache=True)
